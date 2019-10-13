@@ -5,7 +5,7 @@ from .serializers import EssaySerializer, AlbumSerializer, FilesSerializer
 # 파일 업로드 문제 해결
 from rest_framework.parsers import MultiPartParser, FormParser
 from rest_framework.response import Response
-from rest_framework import status 
+from rest_framework import status
 
 class PostViewSet(viewsets.ModelViewSet):
 
@@ -14,7 +14,6 @@ class PostViewSet(viewsets.ModelViewSet):
 
     def perform_create(self, serializer):
         serializer.save(author=self.request.user)
-
 
 class ImgViewSet(viewsets.ModelViewSet):
     
