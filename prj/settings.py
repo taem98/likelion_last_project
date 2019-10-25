@@ -123,3 +123,8 @@ STATIC_URL = '/static/'
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
+REST_FRAMEWORK = {
+    'DELETE_PAGENATION_CLASS':'rest_framework.pagenation.PageNumberPagination',
+    'PAGE_SIZE':1
+}
